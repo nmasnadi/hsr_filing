@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>HSR Waiting Period</title>
+</head>
+<body>
+
+<div class="container d-sm-inline p-5">
+  <div class="row justify-content-center">
+    <h1>HSR Filing Date</h1><br>
+  </div>
+  <div class="row justify-content-center pt-3">
+    <form method="POST" action="/">
+      <input class="form-control form-control-lg" type="date" id="hsr" name="hsr">
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
+  <!-- <div class="row justify-content-center">
+    <form method="POST" action="/">
+      <div class="row justify-content-center">
+        <input type="date" id="hsr" name="hsr">
+      </div>
+      <div class="row justify-content-center">
+        <input type="submit">
+      </div>
+    </form>
+  </div> -->
+  {% if show_messages %}
+    <div class="row justify-content-center pt-5">
+      <h2> Filing date: {{ start_date|safe }} </h2>
+    </div>
+    <div class="row justify-content-center">
+      <h2> End of waiting period: {{ end_date|safe }} </h2>
+    </div>
+
+    <div class="row justify-content-center pt-5">
+      {% if shift_days == 0 %}
+        <h4> There are no shifts due to weekends or holidays. </h4>
+      {% else %}
+        <h4> The end date is shifted by {{ shift_days_str|safe }} because: </h4>
+      {% endif %}
+    </div>
+    {% if shift_days > 0 %}
+      <div class="row justify-content-center">
+        <ul>
+        {% for conflict in conflicts %}
+          <li>
+            <h5> {{ conflict|safe }} </h5>
+          </li>
+        {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  {% endif %}
+</div>
+
+</body>
+</html>
