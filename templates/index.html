@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <title>HSR Waiting Period</title>
 </head>
+<style>
+input {
+      width: 150px; height: 60px;
+    }
+</style>
 <body>
 
 <div class="container d-sm-inline p-5">
@@ -14,20 +19,15 @@
   </div>
   <div class="row justify-content-center pt-3">
     <form method="POST" action="/">
+      <!-- <div class="input-append date datepicker no-padding" data-date-format="yyyy-mm-dd">
+          <input class="input-medium" size="16" type="date">
+          <span class="add-on"><i class="icon-th"></i></span>
+      </div> -->
       <input class="form-control" type="date" id="hsr" name="hsr">
       <button type="submit" class="btn btn-primary w-100">Submit</button>
     </form>
   </div>
-  <!-- <div class="row justify-content-center">
-    <form method="POST" action="/">
-      <div class="row justify-content-center">
-        <input type="date" id="hsr" name="hsr">
-      </div>
-      <div class="row justify-content-center">
-        <input type="submit">
-      </div>
-    </form>
-  </div> -->
+
   {% if show_messages %}
     <div class="row justify-content-center pt-5">
       <h2> Filing date: {{ start_date|safe }} </h2>
