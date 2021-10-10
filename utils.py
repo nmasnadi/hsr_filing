@@ -5,7 +5,7 @@ import holidays
 
 date_fomat = '%Y-%m-%d'
 
-def hsr_waiting_period_end_date(start_date, country='UnitedStates', n_days=31):
+def hsr_waiting_period_end_date(start_date, country='UnitedStates', n_days=30):
     """
     start_date: filing start date, string like '2021-01-20'
     country: country of filing, for holiday purposes
