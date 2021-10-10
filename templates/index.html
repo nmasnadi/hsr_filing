@@ -7,9 +7,7 @@
   <title>HSR Waiting Period</title>
 </head>
 <style>
-input {
-      width: 500px; height: 40px;
-    }
+  input {height: 40px;}
 </style>
 <body>
 
@@ -30,10 +28,16 @@ input {
 
   {% if show_messages %}
     <div class="row justify-content-center pt-5">
-      <h2> Filing date: {{ start_date|safe }} </h2>
+      <h4> Filing date </h4><br>
     </div>
     <div class="row justify-content-center">
-      <h2> End of waiting period: {{ end_date|safe }} </h2>
+      <h2> {{ start_date|safe }} </h2>
+    </div>
+    <div class="row justify-content-center pt-2">
+      <h4> End of waiting period </h4>
+    </div>
+    <div class="row justify-content-center">
+      <h2> {{ end_date|safe }} </h2>
     </div>
 
     <div class="row justify-content-center pt-5">
