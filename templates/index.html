@@ -7,22 +7,20 @@
   <title>HSR Waiting Period</title>
 </head>
 <style>
-  input {height: 40px;}
+  #hsr{width:400px;height:50px;}
 </style>
 <body>
 
-<div class="container d-sm-inline p-5">
+<!-- <div class="container d-sm-inline p-5"> -->
+<div class="row p-5">
+  <div class="col-md-6 offset-md-3">
   <div class="row justify-content-center">
     <h1>HSR Filing Date</h1><br>
   </div>
   <div class="row justify-content-center pt-3">
     <form method="POST" action="/">
-      <!-- <div class="input-append date datepicker no-padding" data-date-format="yyyy-mm-dd">
-          <input class="input-medium" size="16" type="date">
-          <span class="add-on"><i class="icon-th"></i></span>
-      </div> -->
-      <input class="form-control" type="date" id="hsr" name="hsr">
-      <button type="submit" class="btn btn-primary w-100">Submit</button>
+      <input class="form-control form-control-lg" type="date" id="hsr" name="hsr">
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
   </div>
 
@@ -60,6 +58,11 @@
     {% endif %}
   {% endif %}
 </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 </body>
 </html>
