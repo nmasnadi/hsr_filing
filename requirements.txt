@@ -1,0 +1,4 @@
+gunicorn==19.9.0
+flask==1.1.1
+numpy==1.18.1
+holidays==0.11.3.1
